@@ -60,9 +60,9 @@ async def unzip_me(input_directory):
             #compressed_file_name += ".tar.gz"
         # fix for https://t.me/c/1434259219/13344
         g_cmd = ["unzip", "-o", f"{base_dir_name}", "-d", f"{uncompressed_file_name}"]
-        ga_utam = await asyncio.create_subprocess_exec(*g_cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+        gau_tam = await asyncio.create_subprocess_exec(*g_cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
         # Wait for the subprocess to finish
-        gau, tam = await ga_utam.communicate()
+        gau, tam = await gau_tam.communicate()
         print(gau)
         print(tam)
         #e_response = stderr.decode().strip()
@@ -85,9 +85,9 @@ async def untar_me(input_directory):
         m_k_gaut = ['mkdir', f'{uncompressed_file_name}']
         await asyncio.create_subprocess_exec(*m_k_gaut, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
         g_cmd_t = ["tar", "-xvf", f"/app/{base_dir_name}", "-C", f"{uncompressed_file_name}"]
-        bc_kanger = await asyncio.create_subprocess_exec(*g_cmd_t, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+        mc_kanger = await asyncio.create_subprocess_exec(*g_cmd_t, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
         # Wait for the subprocess to finish
-        mc, kanger = await bc_kanger.communicate()
+        mc, kanger = await mc_kanger.communicate()
         print(mc)
         print(kanger)
         #e_response = stderr.decode().strip()
