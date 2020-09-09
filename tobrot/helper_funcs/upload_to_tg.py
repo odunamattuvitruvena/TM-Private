@@ -325,7 +325,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                 )
             if thumb is not None:
                 os.remove(thumb)
-        elif local_file_name.upper().endswith(("MP3", "M4A", "M4B", "FLAC", "WAV")):
+        elif local_file_name.upper().endswith(("ABC")):
             metadata = extractMetadata(createParser(local_file_name))
             duration = 0
             title = ""
