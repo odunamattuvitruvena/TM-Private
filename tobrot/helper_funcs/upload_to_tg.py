@@ -245,7 +245,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             message_for_progress_display = await message.reply_text(
                 "𝗦𝘁𝗮𝗿𝘁𝗶𝗻𝗴 𝗨𝗽𝗹𝗼𝗮𝗱 𝗼𝗳 {}".format(os.path.basename(local_file_name))
             )
-        if local_file_name.upper().endswith(("WEBM")):
+        if local_file_name.upper().endswith(("MP3", "M4A", "M4B", "FLAC", "WAV")):
             metadata = extractMetadata(createParser(local_file_name))
             duration = 0
             if metadata.has("duration"):
